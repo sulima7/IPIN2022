@@ -6,7 +6,7 @@ The TOF-based estimation algorithm determines the positioning accuracy. The most
 
 Since the data is recorded using a platform based on the Decawave DW1000 UWB chip, we have referred to the corresponding manuals and proposed a method to estimate TOF and obtain distance estimation based on leading edge detection algorithms, and Fig. 1 shows the pipeline of our algorithm:
 
-​                                                  ![](https://raw.githubusercontent.com/sulima7/IPIN2022/main/images/Algorithm Pipeline.png)
+​                                                  ![](https://raw.githubusercontent.com/sulima7/IPIN2022/main/images/Algorithm-Pipeline.png)
 
 <center><b>Figure 1 Algorithm Pipeline</b></center>
 
@@ -22,7 +22,7 @@ $$peakAmp= max(  Amp_{CI} )  \tag{2}$$
 
 Next, we collect the distances from anchors with the same burst-id to estimate the target's position. We take the anchor as the center of a circle and the estimated distance as the radius. Candidate positions can be obtained for eight anchors based on the trilateration algorithm. For all these alternative positions, we apply the clustering algorithm to obtain the cluster center, which is the estimated position of the target. Figure 2 shows an example of our method to get an estimated location.
 
-   ![](https://github.com/sulima7/IPIN2022/blob/main/images/Get estimated position by cluster algorithm.png)
+   ![](https://github.com/sulima7/IPIN2022/blob/main/images/Get-estimated-position-by-cluster-algorithm.png)
 
 <center><b>Figure 2 Get estimated position by cluster algorithm</b></center>
 
