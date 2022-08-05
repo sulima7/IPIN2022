@@ -14,7 +14,7 @@ At first glance, the result of the algorithm looks promising, but the distance e
 To achieve a more accurate positioning result, we try to introduce a neural network method to solve these problems mentioned above. We have designed many hand-crafted features, e.g., the output of modified leading edge detection algorithms and distance corresponding to the highest peak in the CI, as the input to estimate the distance between transmitter and receiver. Meanwhile, we use evaluation criteria such as 𝐼𝐷𝑖𝑓𝑓 to measure the probability of whether the estimation was made in an NLOS or low SNRs situation.
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/sulima7/IPIN2022/main/images/formula.png" width="180" height="105">/>
+<img src="https://raw.githubusercontent.com/sulima7/IPIN2022/main/images/formula.png" >/>
 </div>
 
 Next, we collect the distances from anchors with the same burst-id to estimate the target's position. We take the anchor as the center of a circle and the estimated distance as the radius. Candidate positions can be obtained for eight anchors based on the trilateration algorithm. For all these alternative positions, we apply the clustering algorithm to obtain the cluster center, which is the estimated position of the target. Figure 2 shows an example of our method to get an estimated location.
